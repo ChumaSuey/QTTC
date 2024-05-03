@@ -33,7 +33,7 @@ entry_field = tk.Entry(root, width=50)
 entry_field.pack()
 
 # Translate button
-translate_button = tk.Button(root, text="Translate", command=translate_text)
+translate_button = tk.Button(root, text="Preview", command=translate_text)
 translate_button.pack()
 
 # Output field for translated text
@@ -41,7 +41,7 @@ output_field = tk.Label(root, text="")
 output_field.pack()
 
 # Save button (functionality to be added later)
-save_button = tk.Button(root, text="Save", command=save_file)
+save_button = tk.Button(root, text="Save as TXT file", command=save_file)
 save_button.pack()
 
 # Run the main event loop
