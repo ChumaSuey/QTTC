@@ -30,15 +30,16 @@ def save_file():
 # Set DPI awareness
 try:
     ctypes.windll.shcore.SetProcessDpiAwareness(1)
+    # Get scaling factor
+    scaleFactor = ctypes.windll.shcore.GetScaleFactorForDevice(0) / 10
+    # Adjust desired size based on a smaller multiplier (e.g., 0.75)
+    adjusted_width = int(600 * 0.75 * scaleFactor)
+    adjusted_height = int(300 * 0.75 * scaleFactor)
 except:
-    pass
+    adjusted_width = 650
+    adjusted_height = 300
 
-# Get scaling factor
-scaleFactor = ctypes.windll.shcore.GetScaleFactorForDevice(0) / 10
 
-# Adjust desired size based on a smaller multiplier (e.g., 0.75)
-adjusted_width = int(600 * 0.75 * scaleFactor)
-adjusted_height = int(300 * 0.75 * scaleFactor)
 
 # Create the main window
 root = tk.Tk()
