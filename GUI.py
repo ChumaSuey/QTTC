@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import filedialog
 import ctypes
 from main import translate_quake_text
+import pyperclip
 
 def translate_text():
     """Translates the text entered in the entry field and displays it."""
@@ -25,6 +26,14 @@ def save_file():
                 print(f"Translated text saved to: {filename}")
     else:
         print("No translated text available to save.")
+
+def copy():
+    translated_text = output_field.cget("text")  # Get translated text from label
+    if translated_text:
+        pyperclip.copy(translated_text)
+        print('The text to be copied to the clipboard')
+    else:
+        print("No translated text available to copy.")
 
 
 # Set DPI awareness
@@ -65,5 +74,9 @@ output_field.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
 # Save button
 save_button = ttk.Button(root, text="Save as TXT file", command=save_file)
 save_button.grid(row=3, column=0, padx=10, pady=10, sticky="nsew")
+
+# Save button
+copy_button = ttk.Button(root, text="Copy", command=copy)
+copy_button.grid(row=4, column=0, padx=10, pady=10, sticky="nsew")
 
 root.mainloop()
