@@ -8,12 +8,13 @@ import pyperclip
 def translate_text():
     """Translates the text entered in the entry field and displays it."""
     english_text = entry_field.get()
-    translated_text = translate_quake_text(english_text)
+    translated_text = translate_quake_text(english_text).replace("\\n", "\n")
     output_field.config(text=translated_text)
 
 def save_file():
     """Saves the translated text to a file chosen by the user."""
-    translated_text = output_field.cget("text")  # Get translated text from label
+    english_text = entry_field.get()
+    translated_text = translate_quake_text(english_text)
     if translated_text:  # Check if text is present before saving
         filename = filedialog.asksaveasfilename(
             defaultextension=".txt",
@@ -28,7 +29,8 @@ def save_file():
         print("No translated text available to save.")
 
 def copy():
-    translated_text = output_field.cget("text")  # Get translated text from label
+    english_text = entry_field.get()
+    translated_text = translate_quake_text(english_text)
     if translated_text:
         pyperclip.copy(translated_text)
         print('The text to be copied to the clipboard')
