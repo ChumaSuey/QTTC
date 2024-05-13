@@ -57,7 +57,9 @@ The program / script has been tested and worked so far, it'd be ok to always che
 
 It's expected the user writes in english, we covered basic limitations the Quake engine may not like in text, but that's it... maybe until some other time we can add more.
 
-I had an issue when creating the binaries with Windows, i think i solved it with just including Pyperclip as a "hidden" or special import, while Linux version doesn't have this, it works... so yeah!
+I had an issue when creating the binaries with Windows, i think i solved it with just including Pyperclip as a "hidden" or special import, while Linux version doesn't have this, it works... so yeah! just a small curiosity.
+
+The linebreak or "go to the next line" is implicit in the visual preview, but it works when creating the txt file or copying the text from the converter, just a small note.
 
 ## Backend or Behind the scenes.
 
