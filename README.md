@@ -55,11 +55,35 @@ Here we see the 3 functions the script does:
 
 The program / script has been tested and worked so far, it'd be ok to always check the char amount and if any other typos the Quake engine doesn't like... It's mean't to automate or aid in the process of those mappers that wanna make a story densed map for any mod, or just to make sure the text can be used in Quake as messages in the respective message field for some entities.
 
-It's expected the user writes in english, we covered basic limitations the Quake engine may not like in text, but that's it... maybe until some other time ew can add more.
+It's expected the user writes in english, we covered basic limitations the Quake engine may not like in text, but that's it... maybe until some other time we can add more.
+
+I had an issue when creating the binaries with Windows, i think i solved it with just including Pyperclip as a "hidden" or special import, while Linux version doesn't have this, it works... so yeah!
 
 ## Backend or Behind the scenes.
 
-There are 2 py files, GUI and Main
+There are 2 py files, GUI and Main.
+
+GUI is basically TKInter doing it's job on the front to make sure the buttons, printing and file management work.
+
+main.py is the pure backend, using textwrap and basic outline commands Python will make sure the 3 limitations imposed in text work correctly.
+
+There is a py file that does it on Python Console but it's outdated and that was just a left over from experimentation.
+
+## Credits and Special thanks.
+
+Programmers:
+- Chuma.
+- Nepta.
+co crediting my small freelance development team:
+- Absolute Quantum (AQ) [special mention to my friend Dany]
+
+Special thanks.
+- Mikolah (textwrapper suggestion, ty bro)
+- 4LT (Linux Arch testing)
+- Admer (Linux Mint testing)
+- CommonCold (Windows 10 testing)
+- Riktoi (Windows 11 testing)
+- R639 and Borizilla for looking and giving small feedback to our script.
 
 
 
