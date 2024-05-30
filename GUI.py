@@ -6,14 +6,21 @@ from main import translate_quake_text
 import pyperclip
 
 def translate_text():
-    """Translates the text entered in the entry field and displays it."""
-    english_text = entry_field.get()
+    """Translates the text entered in the text field and displays it."""
+    english_text = text_field.get("1.0", tk.END)
     translated_text = translate_quake_text(english_text).replace("\\n", "\n")
-    output_field.config(text=translated_text)
+    output_field.config(state=tk.NORMAL)
+    output_field.delete("1.0", tk.END)
+    output_field.insert(tk.END, translated_text)
+    output_field.config(state=tk.DISABLED)
+
+def clear_text():
+    """Clears the text entered in the text field."""
+    text_field.delete("1.0", tk.END)
 
 def save_file():
     """Saves the translated text to a file chosen by the user."""
-    english_text = entry_field.get()
+    english_text = text_field.get("1.0", tk.END)
     translated_text = translate_quake_text(english_text)
     if translated_text:  # Check if text is present before saving
         filename = filedialog.asksaveasfilename(
@@ -29,56 +36,38 @@ def save_file():
         print("No translated text available to save.")
 
 def copy():
-    english_text = entry_field.get()
-    translated_text = translate_quake_text(english_text)
+    """Copies the translated text to the clipboard."""
+    translated_text = output_field.get("1.0", tk.END)
     if translated_text:
         pyperclip.copy(translated_text)
         print('The text to be copied to the clipboard')
     else:
         print("No translated text available to copy.")
 
-
-# Set DPI awareness
-try:
-    ctypes.windll.shcore.SetProcessDpiAwareness(1)
-    # Get scaling factor
-    scaleFactor = ctypes.windll.shcore.GetScaleFactorForDevice(0) / 10
-    # Adjust desired size based on a smaller multiplier (e.g., 0.75)
-    adjusted_width = int(600 * 0.75 * scaleFactor)
-    adjusted_height = int(300 * 0.75 * scaleFactor)
-except:
-    adjusted_width = 650
-    adjusted_height = 300
-
-
-
-# Create the main window
 root = tk.Tk()
 root.title("Quake Trigger Text Converter")
 
-# Set window size
-root.geometry(f"{adjusted_width}x{adjusted_height}")
+text_field = tk.Text(root, height=10, width=50, font=("Arial", 14))
+text_field.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
 
-# Entry field for English text
-entry_field = tk.Entry(root, width=50, font=("Arial", 14))
-entry_field.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
+scrollbar = tk.Scrollbar(root)
+scrollbar.grid(row=0, column=1, sticky="nsew")
+text_field.config(yscrollcommand=scrollbar.set)
+scrollbar.config(command=text_field.yview)
 
-# Translate button
-button_style = ttk.Style()
-button_style.configure("TButton", background="blue", foreground="black")  # Setting text color to black
-translate_button = ttk.Button(root, text="Preview", command=translate_text, style="TButton")
+translate_button = ttk.Button(root, text="Translate", command=translate_text)
 translate_button.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
 
-# Output field for translated text
-output_field = tk.Label(root, text="", font=("Arial", 12))
-output_field.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
+clear_button = ttk.Button(root, text="Clear", command=clear_text)
+clear_button.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
 
-# Save button
-save_button = ttk.Button(root, text="Save as TXT file", command=save_file)
-save_button.grid(row=3, column=0, padx=10, pady=10, sticky="nsew")
+save_button = ttk.Button(root, text="Save", command=save_file)
+save_button.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
 
-# Save button
 copy_button = ttk.Button(root, text="Copy", command=copy)
-copy_button.grid(row=4, column=0, padx=10, pady=10, sticky="nsew")
+copy_button.grid(row=2, column=1, padx=10, pady=10, sticky="nsew")
+
+output_field = tk.Text(root, height=10, width=50, state=tk.DISABLED, font=("Arial", 14))
+output_field.grid(row=3, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
 
 root.mainloop()
