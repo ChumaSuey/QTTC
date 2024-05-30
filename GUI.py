@@ -7,16 +7,18 @@ import pyperclip
 
 def translate_text():
     """Translates the text entered in the text field and displays it."""
-    english_text = text_field.get("1.0", tk.END)
-    translated_text = translate_quake_text(english_text).replace("\\n", "\n")
+    english_text = text_field.get("1.0", tk.END).replace("/n", "\n").replace("//n", "\n")
+    translated_text = translate_quake_text(english_text)
     output_field.config(state=tk.NORMAL)
     output_field.delete("1.0", tk.END)
     output_field.insert(tk.END, translated_text)
     output_field.config(state=tk.DISABLED)
+    newline_label.config(text="Newline added")
 
 def clear_text():
     """Clears the text entered in the text field."""
     text_field.delete("1.0", tk.END)
+    newline_label.config(text="")
 
 def save_file():
     """Saves the translated text to a file chosen by the user."""
@@ -34,6 +36,7 @@ def save_file():
                 print(f"Translated text saved to: {filename}")
     else:
         print("No translated text available to save.")
+    newline_label.config(text="")
 
 def copy():
     """Copies the translated text to the clipboard."""
@@ -43,9 +46,13 @@ def copy():
         print('The text to be copied to the clipboard')
     else:
         print("No translated text available to copy.")
+    newline_label.config(text="")
 
 root = tk.Tk()
 root.title("Quake Trigger Text Converter")
+
+newline_label = tk.Label(root, text="")
+newline_label.grid(row=4, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
 
 text_field = tk.Text(root, height=10, width=50, font=("Arial", 14))
 text_field.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")

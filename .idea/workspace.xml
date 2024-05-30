@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="Messing around with Grid">
-      <change beforePath="$PROJECT_DIR$/.idea/Quake Trigger Text Converter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Quake Trigger Text Converter.iml" afterDir="false" />
+    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="Widget implemented, suggested by 4LT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
@@ -111,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714768369010</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Widget implemented, suggested by 4LT">
+      <option name="closed" value="true" />
+      <created>1717028447989</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717028447989</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +136,7 @@
     <MESSAGE value="Some fixes" />
     <MESSAGE value="Changes:&#10;-CMDMain is where the original script is just in Python console command.&#10;&#10;-GUI and main work together.&#10;GUI is where TKInter works.&#10;main.py is the backend." />
     <MESSAGE value="Messing around with Grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="Messing around with Grid" />
+    <MESSAGE value="Widget implemented, suggested by 4LT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Widget implemented, suggested by 4LT" />
   </component>
 </project>
