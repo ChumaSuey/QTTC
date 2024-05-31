@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="copy in trenchbroom as a trigger relay WIP">
+    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="Fixes for Copy_trenchbroom function or copy as trigger_relay">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
@@ -28,6 +28,7 @@
             <value>
               <list>
                 <branch-info repo="$PROJECT_DIR$" source="v2.0" />
+                <branch-info repo="$PROJECT_DIR$" source="v2.5" />
               </list>
             </value>
           </entry>
@@ -36,7 +37,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="v2.0" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -134,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717070474236</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixes for Copy_trenchbroom function or copy as trigger_relay">
+      <option name="closed" value="true" />
+      <created>1717185349043</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717185349043</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +164,7 @@
     <MESSAGE value="Widget implemented, suggested by 4LT" />
     <MESSAGE value="Fixed functionality about linebreaks" />
     <MESSAGE value="copy in trenchbroom as a trigger relay WIP" />
-    <option name="LAST_COMMIT_MESSAGE" value="copy in trenchbroom as a trigger relay WIP" />
+    <MESSAGE value="Fixes for Copy_trenchbroom function or copy as trigger_relay" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes for Copy_trenchbroom function or copy as trigger_relay" />
   </component>
 </project>
