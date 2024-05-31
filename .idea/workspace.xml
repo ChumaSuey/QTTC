@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="Fixed functionality about linebreaks">
+    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="copy in trenchbroom as a trigger relay WIP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
@@ -126,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717040899096</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="copy in trenchbroom as a trigger relay WIP">
+      <option name="closed" value="true" />
+      <created>1717070474236</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717070474236</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +154,7 @@
     <MESSAGE value="Messing around with Grid" />
     <MESSAGE value="Widget implemented, suggested by 4LT" />
     <MESSAGE value="Fixed functionality about linebreaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed functionality about linebreaks" />
+    <MESSAGE value="copy in trenchbroom as a trigger relay WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="copy in trenchbroom as a trigger relay WIP" />
   </component>
 </project>

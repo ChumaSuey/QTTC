@@ -52,11 +52,14 @@ def copy_trenchbroom():
     """Copies the translated text to the clipboard in the format you specified."""
     translated_text = output_field.get("1.0", tk.END)
     if translated_text:
-        translated_text = '// entity 0\n{\n'
-        translated_text += '  "classname" "trigger_relay"\n'
-        translated_text += '  "message" "' + translated_text + '"\n'
-        translated_text += '}\n'  # Add the closing curly brace here
-        pyperclip.copy(translated_text)
+        translated_text = translated_text.rstrip('\n')
+        translated_text2 = '// entity 0\n{\n'
+        translated_text2 += '  "classname" "trigger_relay"\n'
+        translated_text2 += '  "message" "' + translated_text + '"\n'
+        translated_text2 += '}\n'  # Add the closing curly brace here
+        absoluteshambler = translated_text2
+        #pyperclip.copy(translated_text)
+        pyperclip.copy(absoluteshambler)
         print('The text to be copied to the clipboard')
     else:
         print("No translated text available to copy.")
@@ -91,7 +94,7 @@ save_button.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
 copy_button = ttk.Button(root, text="Copy", command=copy)
 copy_button.grid(row=2, column=1, padx=10, pady=10, sticky="nsew")
 
-copy_trenchbroom_button = ttk.Button(root, text="Copy Trenchbroom Format", command=copy_trenchbroom)
+copy_trenchbroom_button = ttk.Button(root, text="Copy into trigger_relay", command=copy_trenchbroom)
 copy_trenchbroom_button.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
 
 preview_label.grid(row=1, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
