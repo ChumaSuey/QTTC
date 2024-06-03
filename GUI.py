@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
-import ctypes
 from main import translate_quake_text
 import pyperclip
 
@@ -117,7 +116,7 @@ clear_button = ttk.Button(root, text="Clear", command=clear_text)
 clear_button.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
 
 save_button = ttk.Button(root, text="Save", command=save_file)
-save_button.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
+save_button.grid(row=1, column=2, padx=10, pady=10, sticky="nsew")
 
 copy_button = ttk.Button(root, text="Copy", command=copy)
 copy_button.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
