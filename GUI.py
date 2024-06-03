@@ -12,11 +12,14 @@ def translate_text():
     output_field.delete("1.0", tk.END)
     output_field.insert(tk.END, translated_text)
     output_field.config(state=tk.DISABLED)
-    newline_label.config(text="Newline added")
+    newline_label.config(text="Text translated to Quake format successfully!")
 
 def clear_text():
-    """Clears the text entered in the text field."""
+    """Clears the text entered in the text field and the translated text screen."""
     text_field.delete("1.0", tk.END)
+    output_field.config(state=tk.NORMAL)
+    output_field.delete("1.0", tk.END)
+    output_field.config(state=tk.DISABLED)
     newline_label.config(text="")
 
 def save_file():
@@ -35,7 +38,7 @@ def save_file():
                 print(f"Translated text saved to: {filename}")
     else:
         print("No translated text available to save.")
-    newline_label.config(text="")
+    newline_label.config(text="Insert a text for translation to save it as a text file")
 
 def copy():
     """Copies the translated text to the clipboard."""
@@ -45,7 +48,7 @@ def copy():
         print('The text to be copied to the clipboard')
     else:
         print("No translated text available to copy.")
-    newline_label.config(text="")
+    newline_label.config(text="Insert a text for translation to copy it in your clipboard")
 
 def copy_trenchbroom():
     """Copies the translated text to the clipboard in the format of a trigger_relay (point entity)."""
@@ -62,7 +65,7 @@ def copy_trenchbroom():
         print('The text to be copied to the clipboard')
     else:
         print("No translated text available to copy.")
-    newline_label.config(text="")
+    newline_label.config(text="Insert a text for translation to copy it into Trenchbroom as a trigger_relay")
 
 def copy_trenchbroom2():
     """Copies the translated text to the clipboard in the format of a trigger_textstory (brush entity)."""
@@ -85,7 +88,7 @@ def copy_trenchbroom2():
         print('The text to be copied to the clipboard')
     else:
         print("No translated text available to copy.")
-    newline_label.config(text="")
+    newline_label.config(text="Insert a text for translation to copy it into Trenchbroom as a trigger_textstory")
 
 
 root = tk.Tk()
