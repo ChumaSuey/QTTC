@@ -106,7 +106,7 @@ co crediting my small freelance development team:
 
 Special thanks.
 - Mikolah (textwrapper suggestion, ty bro)
-- 4LT (Linux Arch testing)
+- 4LT (Linux Arch testing and also feedbacks and observation to improve the script)
 - Admer (Linux Mint testing)
 - CommonCold (Windows 10 testing)
 - Phoenyx (Windows 10 testing)
