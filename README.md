@@ -94,7 +94,7 @@ There is a py file that does it on Python Console but it's outdated and that was
 
 As of version V2.5 what has been implemented is that the Clear button cleans both input and output.
 
-The Copy into Trigger_textstory and Copy into Trigger_relay will just print text with the translated variable inside, so it's copied 
+The Copy into Trigger_textstory and Copy into Trigger_relay will just print text with the translated variable inside, so it's copied into the clipboard with the intention to be copied to Trenchbroom (it works)
 
 ## Credits and Special thanks.
 
