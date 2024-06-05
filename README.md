@@ -14,17 +14,23 @@ In the case the script doesn't work for some reason and you wanna try out instal
 
 Works in Windows 11, 10 and in Linux it has been tested in Mint and Arch with a python version. (hope it runs for you as well)
 
-QTTC-Win is the windows version, QTTC-Linux is the linux version (binaries made in Ubuntu)
+QTTC-Win is the windows version, QTTC-Lin is the linux version (binaries made in Ubuntu)
 
 ## Instructions on how to use the script (from the GUI perspective) with direct steps.
 
 from Wadcleaver GUI's feedback i've implemented and Nepta did an optimization so it looks good in most screens, but here it is what you will see.
 
+We've made some changes to the script in order to have more functions, so pictures are rather different than the previous version:
+
 1. Open the script
 
-![image](https://github.com/ChumaSuey/QTTC/assets/3680154/621a7b42-3e84-431b-b358-13f4a3446a7e)
+![Screenshot 2024-06-05 070943](https://github.com/ChumaSuey/QTTC/assets/3680154/28e281ff-75a4-422b-8120-5f7fe46dea77)
+
 
 2. Input the text into the text input field.
+
+![Screenshot 2024-06-05 071225](https://github.com/ChumaSuey/QTTC/assets/3680154/d6d24168-6810-4a42-af16-976bf1131f21)
+
 
 So we will use an extract from the song "The root of all evil" by Dream Theater with some adds to make an example:
 
@@ -35,21 +41,36 @@ Cruel enough for me to feel no grief
 
 this will be our input.
 
-3. Click preview to verify the text.
+3. Click Translate to verify the text.
 
-![image](https://github.com/ChumaSuey/QTTC/assets/3680154/7602a40a-e9fd-4f3d-9536-fd9a9262a983)
+![Screenshot 2024-06-05 071256](https://github.com/ChumaSuey/QTTC/assets/3680154/3f8be10d-9d6c-4d58-b17e-a8a514c22060)
 
 Here we see the 3 functions the script does:
 - It line breaks the line at 40 chars maximum.
 - Converts " " into `
 - Converts ' into `  (this one was a test case thought by me since i use word for writing the text)
 
+The text appears as if it would be inserted into Trenchbroom, this change remains intentional because basically this text is the variable the script is saving to keep the text.
+
 4. Choose your method of saving the text.
 
-"Copy" button will extract the text and copy/paste it wrapped up:
+This part was reworked on to have more options at hand.
+
+![image](https://github.com/ChumaSuey/QTTC/assets/3680154/d93ec39d-fc64-421d-903b-d52baf9a143d)
+
+
+"Copy" button will copy the text into clipboard:
 > Proud `enough` for you to call me\narrogant Greedy `enough` to be labeled a\nthief Angry enough for me to go and hurt\na man Cruel enough for me to feel no\ngrief
 
-"Save as TXT File" will just save the text as a text file wherever you point the path at (in Windows it's a typical save, indicate name of the file and where you want it saved with the explorer)
+"Copy into trigger_relay" will copy the text into clipboard (intended to be copied into Trenchbroom) as a trigger_relay filling the "message" field, this was made to copy it as a reference to a point entity.
+
+"Copy into trigger_textstory" will copy the text into clipboard (intended to be copied into Trenchbroom) as a trigger_textstory filling the "message" field ( a brush of 3 units of height and wide), this was made to copy it as a reference to a brush entity.
+
+With this, the main functionality is covered, so the other 2 buttons that remain are the following ones :
+
+"Save" will just save the text as a text file wherever you point the path at (in Windows it's a typical save, indicate name of the file and where you want it saved with the explorer)
+
+"Clear" will clear the input and output text.
 
 ## Notes
 
@@ -71,6 +92,10 @@ main.py is the pure backend, using textwrap and basic outline commands Python wi
 
 There is a py file that does it on Python Console but it's outdated and that was just a left over from experimentation.
 
+As of version V2.5 what has been implemented is that the Clear button cleans both input and output.
+
+The Copy into Trigger_textstory and Copy into Trigger_relay will just print text with the translated variable inside, so it's copied into the clipboard with the intention to be copied to Trenchbroom (it works)
+
 ## Credits and Special thanks.
 
 Programmers:
@@ -84,6 +109,9 @@ Special thanks.
 - 4LT (Linux Arch testing)
 - Admer (Linux Mint testing)
 - CommonCold (Windows 10 testing)
+- Phoenyx (Windows 10 testing)
+- Rabbit (Windows 11 and Mint testing)
+- 66ppt99 (Windows 11 testing)
 - Riktoi (Windows 11 testing)
 - R639 and Borizilla for looking and giving small feedback to our script.
 

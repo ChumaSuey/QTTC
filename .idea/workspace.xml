@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="Changes:&#10;-CMDMain is where the original script is just in Python console command.&#10;&#10;-GUI and main work together.&#10;GUI is where TKInter works.&#10;main.py is the backend.">
+    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="- Implemented trigger_textstory.&#10;- Save button is missing.&#10;- Preview text is missing.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
@@ -21,6 +21,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="v2.0" />
+                <branch-info repo="$PROJECT_DIR$" source="v2.5" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="v2.0" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -32,13 +51,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.GUI.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.GUI.executor&quot;: &quot;Run&quot;,
+    &quot;Python.automover.executor&quot;: &quot;Run&quot;,
+    &quot;Python.envtest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luism/Downloads/automover-main/automover.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,12 +103,77 @@
       <option name="project" value="LOCAL" />
       <updated>1714765458141</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Messing around with Grid">
+      <option name="closed" value="true" />
+      <created>1714768369010</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714768369010</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Widget implemented, suggested by 4LT">
+      <option name="closed" value="true" />
+      <created>1717028447989</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717028447989</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed functionality about linebreaks">
+      <option name="closed" value="true" />
+      <created>1717040899096</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717040899096</updated>
+    </task>
+    <task id="LOCAL-00007" summary="copy in trenchbroom as a trigger relay WIP">
+      <option name="closed" value="true" />
+      <created>1717070474236</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717070474236</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixes for Copy_trenchbroom function or copy as trigger_relay">
+      <option name="closed" value="true" />
+      <created>1717185349043</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717185349043</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- Implemented trigger_textstory.&#10;- Save button is missing.&#10;- Preview text is missing.">
+      <option name="closed" value="true" />
+      <created>1717186804734</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717186804734</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Some fixes" />
     <MESSAGE value="Changes:&#10;-CMDMain is where the original script is just in Python console command.&#10;&#10;-GUI and main work together.&#10;GUI is where TKInter works.&#10;main.py is the backend." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes:&#10;-CMDMain is where the original script is just in Python console command.&#10;&#10;-GUI and main work together.&#10;GUI is where TKInter works.&#10;main.py is the backend." />
+    <MESSAGE value="Messing around with Grid" />
+    <MESSAGE value="Widget implemented, suggested by 4LT" />
+    <MESSAGE value="Fixed functionality about linebreaks" />
+    <MESSAGE value="copy in trenchbroom as a trigger relay WIP" />
+    <MESSAGE value="Fixes for Copy_trenchbroom function or copy as trigger_relay" />
+    <MESSAGE value="- Implemented trigger_textstory.&#10;- Save button is missing.&#10;- Preview text is missing." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Implemented trigger_textstory.&#10;- Save button is missing.&#10;- Preview text is missing." />
   </component>
 </project>
