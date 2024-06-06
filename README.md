@@ -29,8 +29,7 @@ We've made some changes to the script in order to have more functions, so pictur
 
 2. Input the text into the text input field.
 
-![Screenshot 2024-06-05 071225](https://github.com/ChumaSuey/QTTC/assets/3680154/d6d24168-6810-4a42-af16-976bf1131f21)
-
+![Screenshot 2024-06-05 071256](https://github.com/ChumaSuey/QTTC/assets/3680154/3f8be10d-9d6c-4d58-b17e-a8a514c22060)
 
 So we will use an extract from the song "The root of all evil" by Dream Theater with some adds to make an example:
 
@@ -43,7 +42,7 @@ this will be our input.
 
 3. Click Translate to verify the text.
 
-![Screenshot 2024-06-05 071256](https://github.com/ChumaSuey/QTTC/assets/3680154/3f8be10d-9d6c-4d58-b17e-a8a514c22060)
+![Screenshot 2024-06-05 071225](https://github.com/ChumaSuey/QTTC/assets/3680154/d6d24168-6810-4a42-af16-976bf1131f21)
 
 Here we see the 3 functions the script does:
 - It line breaks the line at 40 chars maximum.
@@ -57,6 +56,7 @@ The text appears as if it would be inserted into Trenchbroom, this change remain
 This part was reworked on to have more options at hand.
 
 ![image](https://github.com/ChumaSuey/QTTC/assets/3680154/d93ec39d-fc64-421d-903b-d52baf9a143d)
+
 
 
 "Copy" button will copy the text into clipboard:
