@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
 from main import translate_quake_text
+from main import remove_linebreaks
 import pyperclip
 
 def translate_text():
@@ -21,6 +22,17 @@ def clear_text():
     output_field.delete("1.0", tk.END)
     output_field.config(state=tk.DISABLED)
     newline_label.config(text="")
+
+def linebreak_cleaning():
+    """Removes the "\n" characters from the text field."""
+    current_text = text_field.get("1.0", tk.END)
+    updated_text = remove_linebreaks(current_text)
+    text_field.delete("1.0", tk.END)
+    text_field.insert(tk.END, updated_text)
+
+    # Update the output field with the cleaned text at the end
+    output_field.delete("1.0", tk.END)  # Clear the existing content
+    output_field.insert(tk.END, updated_text)  # Insert the cleaned text at the end
 
 def save_file():
     """Saves the translated text to a file chosen by the user."""
@@ -129,6 +141,10 @@ copy_trenchbroom_button.grid(row=2, column=1, padx=10, pady=10, sticky="nsew")
 
 copy_trenchbroom_button2 = tk.Button(root, text="Copy into trigger_textstory", command=copy_trenchbroom2)
 copy_trenchbroom_button2.grid(row=2, column=2, padx=10, pady=10, sticky="nsew")
+
+linebreak_clean_button = ttk.Button(root, text="Linebreak Cleaning", command=linebreak_cleaning)
+linebreak_clean_button.grid(row=1, column=3, padx=10, pady=10, sticky="nsew")
+
 
 preview_label.grid(row=1, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
 
