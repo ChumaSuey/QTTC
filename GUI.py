@@ -33,7 +33,7 @@ def linebreak_cleaning():
     # Update the output field with the cleaned text at the end
     output_field.delete("1.0", tk.END)  # Clear the existing content
     output_field.insert(tk.END, updated_text)  # Insert the cleaned text at the end
-
+    newline_label.config(text="Linebreaks cleaned!")
 def save_file():
     """Saves the translated text to a file chosen by the user."""
     english_text = text_field.get("1.0", tk.END)
