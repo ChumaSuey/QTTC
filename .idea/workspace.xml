@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="First push into V3.0 Experimental.&#10;&#10;The only new feature per se: linebreak cleaning.&#10;&#10;The input text will be cleaned in the same input window of any /n or linebreaks, intended for those that never saved manually.">
+    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="Added linebreak info update on the label line.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
@@ -92,13 +92,22 @@
       <option name="project" value="LOCAL" />
       <updated>1719460544398</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added linebreak info update on the label line.">
+      <option name="closed" value="true" />
+      <created>1719585509724</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719585509724</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Some fixes" />
     <MESSAGE value="Changes:&#10;-CMDMain is where the original script is just in Python console command.&#10;&#10;-GUI and main work together.&#10;GUI is where TKInter works.&#10;main.py is the backend." />
     <MESSAGE value="First push into V3.0 Experimental.&#10;&#10;The only new feature per se: linebreak cleaning.&#10;&#10;The input text will be cleaned in the same input window of any /n or linebreaks, intended for those that never saved manually." />
-    <option name="LAST_COMMIT_MESSAGE" value="First push into V3.0 Experimental.&#10;&#10;The only new feature per se: linebreak cleaning.&#10;&#10;The input text will be cleaned in the same input window of any /n or linebreaks, intended for those that never saved manually." />
+    <MESSAGE value="Added linebreak info update on the label line." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added linebreak info update on the label line." />
   </component>
 </project>

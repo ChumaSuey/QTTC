@@ -50,7 +50,7 @@ def save_file():
                 print(f"Translated text saved to: {filename}")
     else:
         print("No translated text available to save.")
-    newline_label.config(text="Insert a text for translation to save it as a text file")
+    newline_label.config(text="Text saved as a file in the selected destination!")
 
 def copy():
     """Copies the translated text to the clipboard."""
@@ -60,7 +60,7 @@ def copy():
         print('The text to be copied to the clipboard')
     else:
         print("No translated text available to copy.")
-    newline_label.config(text="Insert a text for translation to copy it in your clipboard")
+    newline_label.config(text="Text copied to clipboard!")
 
 def copy_trenchbroom():
     """Copies the translated text to the clipboard in the format of a trigger_relay (point entity)."""
@@ -74,10 +74,10 @@ def copy_trenchbroom():
         absoluteshambler = translated_text2
         #pyperclip.copy(translated_text)
         pyperclip.copy(absoluteshambler)
-        print('The text to be copied to the clipboard')
+        print('Text copied to the clipboard')
     else:
         print("No translated text available to copy.")
-    newline_label.config(text="Insert a text for translation to copy it into Trenchbroom as a trigger_relay")
+    newline_label.config(text="Trigger_relay (point entity) copied to clipboard!")
 
 def copy_trenchbroom2():
     """Copies the translated text to the clipboard in the format of a trigger_textstory (brush entity)."""
@@ -97,10 +97,10 @@ def copy_trenchbroom2():
         translated_text2 += '}\n'  # Add the closing curly brace here
         absoluteshambler = translated_text2
         pyperclip.copy(absoluteshambler)
-        print('The text to be copied to the clipboard')
+        print('Text copied to the clipboard')
     else:
         print("No translated text available to copy.")
-    newline_label.config(text="Insert a text for translation to copy it into Trenchbroom as a trigger_textstory")
+    newline_label.config(text="Trigger_textstory (point entity) copied to clipboard!")
 
 
 root = tk.Tk()
