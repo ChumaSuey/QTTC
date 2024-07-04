@@ -20,3 +20,17 @@ def translate_quake_text(text):
         40
     ))
     return translated_text
+
+
+def remove_linebreaks(text):
+    """
+    This function removes the "/n" characters from the input text.
+
+    Args:
+        text: The text from which to remove the "/n" characters.
+
+    Returns:
+        The text with "/n" characters removed.
+    """
+    cleaned_text = text.replace("\\n", " ")
+    return cleaned_text
