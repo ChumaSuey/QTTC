@@ -24,12 +24,12 @@ We've made some changes to the script in order to have more functions, so pictur
 
 1. Open the script
 
-![Screenshot 2024-06-05 070943](https://github.com/ChumaSuey/QTTC/assets/3680154/28e281ff-75a4-422b-8120-5f7fe46dea77)
+![image](https://github.com/user-attachments/assets/1c2254ca-6009-4cef-9b01-68e2ba92298c)
 
 
 2. Input the text into the text input field.
 
-![Screenshot 2024-06-05 071256](https://github.com/ChumaSuey/QTTC/assets/3680154/3f8be10d-9d6c-4d58-b17e-a8a514c22060)
+![image](https://github.com/user-attachments/assets/6775492e-0fdd-4495-993d-fa0a8a434b54)
 
 So we will use an extract from the song "The root of all evil" by Dream Theater with some adds to make an example:
 
@@ -42,7 +42,7 @@ this will be our input.
 
 3. Click Translate to verify the text.
 
-![Screenshot 2024-06-05 071225](https://github.com/ChumaSuey/QTTC/assets/3680154/d6d24168-6810-4a42-af16-976bf1131f21)
+![image](https://github.com/user-attachments/assets/64cf7ec2-7d07-46c5-b9a4-21135320d31b)
 
 Here we see the 3 functions the script does:
 - It line breaks the line at 40 chars maximum.
@@ -55,7 +55,8 @@ The text appears as if it would be inserted into Trenchbroom, this change remain
 
 This part was reworked on to have more options at hand.
 
-![image](https://github.com/ChumaSuey/QTTC/assets/3680154/d93ec39d-fc64-421d-903b-d52baf9a143d)
+![image](https://github.com/user-attachments/assets/a1c2174c-e887-4554-b178-0e9e6b22eb51)
+
 
 
 
@@ -66,11 +67,30 @@ This part was reworked on to have more options at hand.
 
 "Copy into trigger_textstory" will copy the text into clipboard (intended to be copied into Trenchbroom) as a trigger_textstory filling the "message" field ( a brush of 3 units of height and wide), this was made to copy it as a reference to a brush entity.
 
-With this, the main functionality is covered, so the other 2 buttons that remain are the following ones :
+With this, the main functionality is covered, so the other 3 buttons that remain are the following ones :
 
 "Save" will just save the text as a text file wherever you point the path at (in Windows it's a typical save, indicate name of the file and where you want it saved with the explorer)
 
 "Clear" will clear the input and output text.
+
+This one is a bit more complex but i'll explain quickly:
+
+"Linebreak Cleaning" will just clean the existent text of any linebreak "/n" within the text input field, this was programmed so the mapper doesn't have to get to the original notes to retranslate the desired text.
+
+So in the example the translated text : 
+> Proud `enough` for you to call me\narrogant Greedy `enough` to be labeled a\nthief Angry enough for me to go and hurt\na man Cruel enough for me to feel no\ngrief
+
+When the button is pressed it, the text results in:
+> Proud `enough` for you to call me arrogant Greedy `enough` to be labeled a thief Angry enough for me to go and hurt a man Cruel enough for me to feel no grief
+
+A couple of images so the function can be visualized:
+
+![image](https://github.com/user-attachments/assets/6fb7b2f4-0a1c-4615-bef1-817b3945477d)
+
+![image](https://github.com/user-attachments/assets/37c863e4-6a16-477d-94d7-0157170cef5e)
+
+You can see within the greenlines in the text input field the linebreaks have been cleaned... the red lines are where the linebreaks should go.
+
 
 ## Notes
 
