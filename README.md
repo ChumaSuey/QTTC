@@ -83,13 +83,13 @@ So in the example the translated text :
 When the button is pressed it, the text results in:
 > Proud `enough` for you to call me arrogant Greedy `enough` to be labeled a thief Angry enough for me to go and hurt a man Cruel enough for me to feel no grief
 
-A couple of images so the function can be visualized:
+A couple of images so the button functionality can be visualized:
 
 ![image](https://github.com/user-attachments/assets/6fb7b2f4-0a1c-4615-bef1-817b3945477d)
 
 ![image](https://github.com/user-attachments/assets/37c863e4-6a16-477d-94d7-0157170cef5e)
 
-You can see within the greenlines in the text input field the linebreaks have been cleaned... the red lines are where the linebreaks should go.
+As it can be seen within the green lines in the text input field, the linebreaks have been cleaned... the red lines are where the linebreaks should go.
 
 
 ## Notes
