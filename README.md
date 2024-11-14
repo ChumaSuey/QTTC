@@ -29,26 +29,30 @@ We've made some changes to the script in order to have more functions, so pictur
 
 2. Input the text into the text input field.
 
-![Screenshot 2024-06-05 071225](https://github.com/ChumaSuey/QTTC/assets/3680154/d6d24168-6810-4a42-af16-976bf1131f21)
+![image](https://github.com/user-attachments/assets/be790d74-d628-42bf-a8c9-a3e0bd8dc244)
+
 
 
 So we will use an extract from the song "The root of all evil" by Dream Theater with some adds to make an example:
 
 Proud "enough" for you to call me arrogant
-Greedy 'enough' to be labeled a thief
-Angry enough for me to go and hurt a man
-Cruel enough for me to feel no grief
+Greedy ‘enough’ to be labeled a thief
+Angry “enough” for me to go and hurt a man
+Cruel 'enough' for me to feel no grief
 
 this will be our input.
 
 3. Click Translate to verify the text.
 
-![Screenshot 2024-06-05 071256](https://github.com/ChumaSuey/QTTC/assets/3680154/3f8be10d-9d6c-4d58-b17e-a8a514c22060)
+![image](https://github.com/user-attachments/assets/52e5e60e-0611-4b07-80c4-6d88db75f8a8)
 
-Here we see the 3 functions the script does:
+Here we see the 4 functions the script does:
 - It line breaks the line at 40 chars maximum.
 - Converts " " into `
-- Converts ' into `  (this one was a test case thought by me since i use word for writing the text)
+- Converts ‘ ’ into `
+- Converts “ ” into `
+
+It used to convert ' into ` but Quake supports single ticks, just not curly ticks
 
 The text appears as if it would be inserted into Trenchbroom, this change remains intentional because basically this text is the variable the script is saving to keep the text.
 
@@ -56,21 +60,26 @@ The text appears as if it would be inserted into Trenchbroom, this change remain
 
 This part was reworked on to have more options at hand.
 
-![image](https://github.com/ChumaSuey/QTTC/assets/3680154/d93ec39d-fc64-421d-903b-d52baf9a143d)
+![image](https://github.com/user-attachments/assets/a958d003-ce4d-4033-90de-8bf4cd40dc0d)
+
 
 
 "Copy" button will copy the text into clipboard:
-> Proud `enough` for you to call me\narrogant Greedy `enough` to be labeled a\nthief Angry enough for me to go and hurt\na man Cruel enough for me to feel no\ngrief
+> Proud `enough` for you to call me\narrogant Greedy `enough` to be labeled a\nthief Angry `enough` for me to go and\nhurt a man Cruel 'enough' for me to feel\nno grief
 
 "Copy into trigger_relay" will copy the text into clipboard (intended to be copied into Trenchbroom) as a trigger_relay filling the "message" field, this was made to copy it as a reference to a point entity.
 
 "Copy into trigger_textstory" will copy the text into clipboard (intended to be copied into Trenchbroom) as a trigger_textstory filling the "message" field ( a brush of 3 units of height and wide), this was made to copy it as a reference to a brush entity.
 
-With this, the main functionality is covered, so the other 2 buttons that remain are the following ones :
+With this, the main functionality is covered, so the other 3 buttons that remain are the following ones :
 
 "Save" will just save the text as a text file wherever you point the path at (in Windows it's a typical save, indicate name of the file and where you want it saved with the explorer)
 
 "Clear" will clear the input and output text.
+
+This one is a bit more complex but i'll explain quickly:
+
+"Linebreak Cleaning" will just clean the existent text of any linebreak "/n" within the text input field, this was programmed so the mapper doesn't have to get to the original notes to retranslate the desired text.
 
 ## Notes
 
