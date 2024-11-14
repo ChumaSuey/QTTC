@@ -56,7 +56,7 @@ Here we see the 4 functions the script does:
 - Converts ‘ ’ into `
 - Converts “ ” into `
 
-It used to convert ' into ` but Quake supports single ticks, just not curly ticks
+It used to convert ' into ` but Quake supports single ticks, just not curly ticks... The last paragraph was left with the single ticks was left just for demonstration purposes.
 
 The text appears as if it would be inserted into Trenchbroom, this change remains intentional because basically this text is the variable the script is saving to keep the text.
 
