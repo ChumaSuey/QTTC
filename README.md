@@ -24,30 +24,39 @@ We've made some changes to the script in order to have more functions, so pictur
 
 1. Open the script
 
-![image](https://github.com/user-attachments/assets/1c2254ca-6009-4cef-9b01-68e2ba92298c)
+![Screenshot 2024-06-05 070943](https://github.com/ChumaSuey/QTTC/assets/3680154/28e281ff-75a4-422b-8120-5f7fe46dea77)
 
 
 2. Input the text into the text input field.
 
-![image](https://github.com/user-attachments/assets/6775492e-0fdd-4495-993d-fa0a8a434b54)
+![image](https://github.com/user-attachments/assets/be790d74-d628-42bf-a8c9-a3e0bd8dc244)
+
+
 
 So we will use an extract from the song "The root of all evil" by Dream Theater with some adds to make an example:
 
 Proud "enough" for you to call me arrogant
-Greedy 'enough' to be labeled a thief
-Angry enough for me to go and hurt a man
-Cruel enough for me to feel no grief
+
+Greedy ‘enough’ to be labeled a thief
+
+Angry “enough” for me to go and hurt a man
+
+Cruel 'enough' for me to feel no grief
+
 
 this will be our input.
 
 3. Click Translate to verify the text.
 
-![image](https://github.com/user-attachments/assets/64cf7ec2-7d07-46c5-b9a4-21135320d31b)
+![image](https://github.com/user-attachments/assets/52e5e60e-0611-4b07-80c4-6d88db75f8a8)
 
-Here we see the 3 functions the script does:
+Here we see the 4 functions the script does:
 - It line breaks the line at 40 chars maximum.
 - Converts " " into `
-- Converts ' into `  (this one was a test case thought by me since i use word for writing the text)
+- Converts ‘ ’ into `
+- Converts “ ” into `
+
+It used to convert ' into ` but Quake supports single ticks, just not curly ticks... The last paragraph was left with the single ticks was left just for demonstration purposes.
 
 The text appears as if it would be inserted into Trenchbroom, this change remains intentional because basically this text is the variable the script is saving to keep the text.
 
@@ -55,13 +64,12 @@ The text appears as if it would be inserted into Trenchbroom, this change remain
 
 This part was reworked on to have more options at hand.
 
-![image](https://github.com/user-attachments/assets/a1c2174c-e887-4554-b178-0e9e6b22eb51)
-
+![image](https://github.com/user-attachments/assets/a958d003-ce4d-4033-90de-8bf4cd40dc0d)
 
 
 
 "Copy" button will copy the text into clipboard:
-> Proud `enough` for you to call me\narrogant Greedy `enough` to be labeled a\nthief Angry enough for me to go and hurt\na man Cruel enough for me to feel no\ngrief
+> Proud `enough` for you to call me\narrogant Greedy `enough` to be labeled a\nthief Angry `enough` for me to go and\nhurt a man Cruel 'enough' for me to feel\nno grief
 
 "Copy into trigger_relay" will copy the text into clipboard (intended to be copied into Trenchbroom) as a trigger_relay filling the "message" field, this was made to copy it as a reference to a point entity.
 
@@ -76,21 +84,6 @@ With this, the main functionality is covered, so the other 3 buttons that remain
 This one is a bit more complex but i'll explain quickly:
 
 "Linebreak Cleaning" will just clean the existent text of any linebreak "/n" within the text input field, this was programmed so the mapper doesn't have to get to the original notes to retranslate the desired text.
-
-So in the example the translated text : 
-> Proud `enough` for you to call me\narrogant Greedy `enough` to be labeled a\nthief Angry enough for me to go and hurt\na man Cruel enough for me to feel no\ngrief
-
-When the button is pressed it, the text results in:
-> Proud `enough` for you to call me arrogant Greedy `enough` to be labeled a thief Angry enough for me to go and hurt a man Cruel enough for me to feel no grief
-
-A couple of images so the button functionality can be visualized:
-
-![image](https://github.com/user-attachments/assets/6fb7b2f4-0a1c-4615-bef1-817b3945477d)
-
-![image](https://github.com/user-attachments/assets/37c863e4-6a16-477d-94d7-0157170cef5e)
-
-As it can be seen within the green lines in the text input field, the linebreaks have been cleaned... the red lines are where the linebreaks should go.
-
 
 ## Notes
 
@@ -134,6 +127,5 @@ Special thanks.
 - 66ppt99 (Windows 11 testing)
 - Riktoi (Windows 11 testing)
 - R639 and Borizilla for looking and giving small feedback to our script.
-
 
 
