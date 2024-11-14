@@ -36,9 +36,13 @@ We've made some changes to the script in order to have more functions, so pictur
 So we will use an extract from the song "The root of all evil" by Dream Theater with some adds to make an example:
 
 Proud "enough" for you to call me arrogant
+
 Greedy ‘enough’ to be labeled a thief
+
 Angry “enough” for me to go and hurt a man
+
 Cruel 'enough' for me to feel no grief
+
 
 this will be our input.
 
