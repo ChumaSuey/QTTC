@@ -39,5 +39,5 @@ def remove_linebreaks(text):
     return cleaned_text
 
 
-    # Replace double quotes with backticks
+    # Replace single quotes with backticks
     # filtered_text = text.replace("'", "`")
