@@ -12,8 +12,12 @@ def translate_quake_text(text):
         The translated Quake trigger text as a string.
     """
 
+    # Replace single curly quotes with backticks
+    filtered_text = text.replace('‘', '`').replace('’', '`')
+    # Replace double curly quotes with backticks
+    filtered_text = filtered_text.replace('“', '`').replace('”', '`')
     # Replace double quotes with backticks
-    filtered_text = text.replace('"', "`")
+    filtered_text = filtered_text.replace('"', "`")
     translated_text = '\\n'.join(textwrap.wrap(
         filtered_text,
         40
