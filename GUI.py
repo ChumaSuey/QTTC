@@ -14,6 +14,7 @@ def translate_text():
     output_field.insert(tk.END, translated_text)
     output_field.config(state=tk.DISABLED)
     newline_label.config(text="Text translated to Quake format successfully!")
+    print("Text translated to Quake format successfully!")
 
 def clear_text():
     """Clears the text entered in the text field and the translated text screen."""
@@ -22,6 +23,7 @@ def clear_text():
     output_field.delete("1.0", tk.END)
     output_field.config(state=tk.DISABLED)
     newline_label.config(text="")
+    print("Text cleaned!")
 
 def linebreak_cleaning():
     """Removes the "\n" characters from the text field."""
@@ -34,6 +36,7 @@ def linebreak_cleaning():
     output_field.delete("1.0", tk.END)  # Clear the existing content
     output_field.insert(tk.END, updated_text)  # Insert the cleaned text at the end
     newline_label.config(text="Linebreaks cleaned!")
+    print("Linebreaks cleaned!")
 def save_file():
     """Saves the translated text to a file chosen by the user."""
     english_text = text_field.get("1.0", tk.END)
@@ -57,9 +60,9 @@ def copy():
     translated_text = output_field.get("1.0", tk.END)
     if translated_text:
         pyperclip.copy(translated_text)
-        print('The text to be copied to the clipboard')
+        print('Text copied to the clipboard')
     else:
-        print("No translated text available to copy.")
+        print('No translated text available to copy.')
     newline_label.config(text="Text copied to clipboard!")
 
 def copy_trenchbroom():
@@ -74,9 +77,9 @@ def copy_trenchbroom():
         absoluteshambler = translated_text2
         #pyperclip.copy(translated_text)
         pyperclip.copy(absoluteshambler)
-        print('Text copied to the clipboard')
+        print('Text copied to the clipboard as a trigger_relay')
     else:
-        print("No translated text available to copy.")
+        print('No translated text available to copy.')
     newline_label.config(text="Trigger_relay (point entity) copied to clipboard!")
 
 def copy_trenchbroom2():
@@ -97,10 +100,10 @@ def copy_trenchbroom2():
         translated_text2 += '}\n'  # Add the closing curly brace here
         absoluteshambler = translated_text2
         pyperclip.copy(absoluteshambler)
-        print('Text copied to the clipboard')
+        print('Text copied to the clipboard as a trigger_textstory')
     else:
-        print("No translated text available to copy.")
-    newline_label.config(text="Trigger_textstory (point entity) copied to clipboard!")
+        print('No translated text available to copy.')
+    newline_label.config(text="Trigger_textstory (brush entity) copied to clipboard!")
 
 
 root = tk.Tk()
@@ -139,7 +142,7 @@ copy_button.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
 copy_trenchbroom_button = ttk.Button(root, text="Copy into trigger_relay", command=copy_trenchbroom)
 copy_trenchbroom_button.grid(row=2, column=1, padx=10, pady=10, sticky="nsew")
 
-copy_trenchbroom_button2 = tk.Button(root, text="Copy into trigger_textstory", command=copy_trenchbroom2)
+copy_trenchbroom_button2 = ttk.Button(root, text="Copy into trigger_textstory", command=copy_trenchbroom2)
 copy_trenchbroom_button2.grid(row=2, column=2, padx=10, pady=10, sticky="nsew")
 
 linebreak_clean_button = ttk.Button(root, text="Linebreak Cleaning", command=linebreak_cleaning)
