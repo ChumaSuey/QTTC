@@ -24,12 +24,12 @@ We've made some changes to the script in order to have more functions, so pictur
 
 1. Open the script
 
-![Screenshot 2024-06-05 070943](https://github.com/ChumaSuey/QTTC/assets/3680154/28e281ff-75a4-422b-8120-5f7fe46dea77)
+![image](https://github.com/user-attachments/assets/fae187f3-cd59-47c0-8227-1140956daf89)
 
 
 2. Input the text into the text input field.
 
-![image](https://github.com/user-attachments/assets/be790d74-d628-42bf-a8c9-a3e0bd8dc244)
+![image](https://github.com/user-attachments/assets/6cb81942-70c7-4886-9ef7-cac490701229)
 
 
 
@@ -48,7 +48,8 @@ this will be our input.
 
 3. Click Translate to verify the text.
 
-![image](https://github.com/user-attachments/assets/52e5e60e-0611-4b07-80c4-6d88db75f8a8)
+![image](https://github.com/user-attachments/assets/75f867e1-c6b7-4b44-ae7a-cfd2796f7e1d)
+
 
 Here we see the 4 functions the script does:
 - It line breaks the line at 40 chars maximum.
@@ -64,7 +65,8 @@ The text appears as if it would be inserted into Trenchbroom, this change remain
 
 This part was reworked on to have more options at hand.
 
-![image](https://github.com/user-attachments/assets/a958d003-ce4d-4033-90de-8bf4cd40dc0d)
+![image](https://github.com/user-attachments/assets/20e5c9b1-c0bb-4611-85b9-b8183cea2286)
+
 
 
 
@@ -79,11 +81,18 @@ With this, the main functionality is covered, so the other 3 buttons that remain
 
 "Save" will just save the text as a text file wherever you point the path at (in Windows it's a typical save, indicate name of the file and where you want it saved with the explorer)
 
-"Clear" will clear the input and output text.
+"Clear" will clear the input and output text (and also the labels).
 
 This one is a bit more complex but i'll explain quickly:
 
 "Linebreak Cleaning" will just clean the existent text of any linebreak "/n" within the text input field, this was programmed so the mapper doesn't have to get to the original notes to retranslate the desired text.
+
+This is intended to work for an already translated text, and it will only clean the text input field, not the translated output field... an example below. 
+
+Green lines show where the linebreaks (/n) were in the translated text, The blue where they were cleaned from.
+
+![image](https://github.com/user-attachments/assets/48864322-0356-4e26-9453-d1ea3fc44161)
+
 
 ## Notes
 
