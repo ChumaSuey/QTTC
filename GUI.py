@@ -2,10 +2,13 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
 import sv_ttk
+import darkdetect
 from main import translate_quake_text
 from main import remove_linebreaks
 import pyperclip
-import darkdetect
+
+# Define the custom font
+custom_font = ("Segoe UI", 10)
 
 def translate_text():
     """Translates the text entered in the text field and displays it."""
@@ -117,13 +120,13 @@ def copy_trenchbroom2():
 root = tk.Tk()
 root.title("Quake Trigger Text Converter")
 
-newline_label = tk.Label(root, text="")
+newline_label = tk.Label(root, text="", font=custom_font)
 newline_label.grid(row=4, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
 
-preview_label = ttk.Label(root, text="Preview:")
+preview_label = ttk.Label(root, text="Preview:", font=custom_font)
 preview_label.grid(row=0, column=2, padx=10, pady=10, sticky="nsew")
 
-text_field = tk.Text(root, height=10, width=50, font=("Arial", 14))
+text_field = tk.Text(root, height=10, width=50, font=custom_font)
 text_field.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
 
 copy_save_row = tk.Frame(root)
@@ -134,36 +137,37 @@ scrollbar.grid(row=0, column=1, sticky="nsew")
 text_field.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=text_field.yview)
 
-translate_button = ttk.Button(root, text="Translate", command=translate_text)
+translate_button = ttk.Button(root, text="Translate", command=translate_text, style="Custom.TButton")
 translate_button.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
 
-clear_button = ttk.Button(root, text="Clear", command=clear_text)
+clear_button = ttk.Button(root, text="Clear", command=clear_text, style="Custom.TButton")
 clear_button.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
 
-save_button = ttk.Button(root, text="Save", command=save_file)
+save_button = ttk.Button(root, text="Save", command=save_file, style="Custom.TButton")
 save_button.grid(row=1, column=2, padx=10, pady=10, sticky="nsew")
 
-copy_button = ttk.Button(root, text="Copy", command=copy)
+copy_button = ttk.Button(root, text="Copy", command=copy, style="Custom.TButton")
 copy_button.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
 
-copy_trenchbroom_button = ttk.Button(root, text="Copy into trigger_relay", command=copy_trenchbroom)
+copy_trenchbroom_button = ttk.Button(root, text="Copy into trigger_relay", command=copy_trenchbroom, style="Custom.TButton")
 copy_trenchbroom_button.grid(row=2, column=1, padx=10, pady=10, sticky="nsew")
 
-copy_trenchbroom_button2 = ttk.Button(root, text="Copy into trigger_textstory", command=copy_trenchbroom2)
+copy_trenchbroom_button2 = ttk.Button(root, text="Copy into trigger_textstory", command=copy_trenchbroom2, style="Custom.TButton")
 copy_trenchbroom_button2.grid(row=2, column=2, padx=10, pady=10, sticky="nsew")
 
-linebreak_clean_button = ttk.Button(root, text="Linebreak Cleaning", command=linebreak_cleaning)
+linebreak_clean_button = ttk.Button(root, text="Linebreak Cleaning", command=linebreak_cleaning, style="Custom.TButton")
 linebreak_clean_button.grid(row=1, column=3, padx=10, pady=10, sticky="nsew")
 
 preview_label.grid(row=1, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
 
-output_field = tk.Text(root, height=10, width=50, state=tk.DISABLED, font=("Arial", 14))
+output_field = tk.Text(root, height=10, width=50, state=tk.DISABLED, font=custom_font)
 output_field.grid(row=3, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
-
-# Apply Sunvalley theme (direct application)
-#sv_ttk.set_theme("dark")
 
 # Apply Sunvalley theme based on current system theme
 sv_ttk.set_theme(darkdetect.theme().lower())
+
+# Create a custom style for the buttons
+style = ttk.Style()
+style.configure("Custom.TButton", font=custom_font)
 
 root.mainloop()
