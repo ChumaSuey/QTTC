@@ -1,9 +1,11 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
+import sv_ttk
 from main import translate_quake_text
 from main import remove_linebreaks
 import pyperclip
+import darkdetect
 
 def translate_text():
     """Translates the text entered in the text field and displays it."""
@@ -37,9 +39,15 @@ def linebreak_cleaning():
     output_field.insert(tk.END, updated_text)  # Insert the cleaned text at the end
     newline_label.config(text="Linebreaks cleaned!")
     print("Linebreaks cleaned!")
+
 def save_file():
     """Saves the translated text to a file chosen by the user."""
-    english_text = text_field.get("1.0", tk.END)
+    english_text = text_field.get("1.0", tk.END).strip()
+    if not english_text:
+        newline_label.config(text="There is no translated text to save")
+        print("There is no translated text to save.")
+        return
+
     translated_text = translate_quake_text(english_text)
     if translated_text:  # Check if text is present before saving
         filename = filedialog.asksaveasfilename(
@@ -51,9 +59,10 @@ def save_file():
             with open(filename, "w") as file:
                 file.write(translated_text)
                 print(f"Translated text saved to: {filename}")
+        newline_label.config(text="Text saved as a file in the selected destination!")
     else:
+        newline_label.config(text="There is no translated text to save")
         print("No translated text available to save.")
-    newline_label.config(text="Text saved as a file in the selected destination!")
 
 def copy():
     """Copies the translated text to the clipboard."""
@@ -105,7 +114,6 @@ def copy_trenchbroom2():
         print('No translated text available to copy.')
     newline_label.config(text="Trigger_textstory (brush entity) copied to clipboard!")
 
-
 root = tk.Tk()
 root.title("Quake Trigger Text Converter")
 
@@ -121,8 +129,7 @@ text_field.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
 copy_save_row = tk.Frame(root)
 copy_save_row.grid(row=3, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
 
-
-scrollbar = tk.Scrollbar(root)
+scrollbar = ttk.Scrollbar(root)
 scrollbar.grid(row=0, column=1, sticky="nsew")
 text_field.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=text_field.yview)
@@ -148,11 +155,15 @@ copy_trenchbroom_button2.grid(row=2, column=2, padx=10, pady=10, sticky="nsew")
 linebreak_clean_button = ttk.Button(root, text="Linebreak Cleaning", command=linebreak_cleaning)
 linebreak_clean_button.grid(row=1, column=3, padx=10, pady=10, sticky="nsew")
 
-
 preview_label.grid(row=1, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
-
 
 output_field = tk.Text(root, height=10, width=50, state=tk.DISABLED, font=("Arial", 14))
 output_field.grid(row=3, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
+
+# Apply Sunvalley theme (direct application)
+#sv_ttk.set_theme("dark")
+
+# Apply Sunvalley theme based on current system theme
+sv_ttk.set_theme(darkdetect.theme().lower())
 
 root.mainloop()
