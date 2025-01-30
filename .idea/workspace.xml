@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="GUI:&#10;- Label print fixed in trigger_textstory fix&#10;- Trigger_textstory fix in TKInter (swapped from TK to TTK) hence fixing it visually.&#10;Minor:&#10;- Print command messages fixed (python internal command), some changed from '' to &quot;&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/Quake Trigger Text Converter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Quake Trigger Text Converter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="GUI:&#10;- Added a message warning for the file saving function in case no text is written&#10;- Sunvalley with darkdetect implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +37,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.GUI.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.GUI.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sunvalley&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -136,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731677306784</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="GUI:&#10;- Added a message warning for the file saving function in case no text is written&#10;- Sunvalley with darkdetect implemented">
+      <option name="closed" value="true" />
+      <created>1738249598362</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738249598362</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -147,6 +154,7 @@
     <MESSAGE value="Removed double quotes with backticks lines." />
     <MESSAGE value="- Removed single quote function.&#10;- Added replace of single and double curly quotes with backticks" />
     <MESSAGE value="GUI:&#10;- Label print fixed in trigger_textstory fix&#10;- Trigger_textstory fix in TKInter (swapped from TK to TTK) hence fixing it visually.&#10;Minor:&#10;- Print command messages fixed (python internal command), some changed from '' to &quot;&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI:&#10;- Label print fixed in trigger_textstory fix&#10;- Trigger_textstory fix in TKInter (swapped from TK to TTK) hence fixing it visually.&#10;Minor:&#10;- Print command messages fixed (python internal command), some changed from '' to &quot;&quot;" />
+    <MESSAGE value="GUI:&#10;- Added a message warning for the file saving function in case no text is written&#10;- Sunvalley with darkdetect implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI:&#10;- Added a message warning for the file saving function in case no text is written&#10;- Sunvalley with darkdetect implemented" />
   </component>
 </project>
