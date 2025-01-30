@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import filedialog
 import sv_ttk
 import darkdetect
+import ctypes
 from main import translate_quake_text
 from main import remove_linebreaks
 import pyperclip
@@ -87,7 +88,6 @@ def copy_trenchbroom():
         translated_text2 += '  "message" "' + translated_text + '"\n'
         translated_text2 += '}\n'  # Add the closing curly brace here
         absoluteshambler = translated_text2
-        #pyperclip.copy(translated_text)
         pyperclip.copy(absoluteshambler)
         print('Text copied to the clipboard as a trigger_relay')
     else:
@@ -117,8 +117,19 @@ def copy_trenchbroom2():
         print('No translated text available to copy.')
     newline_label.config(text="Trigger_textstory (brush entity) copied to clipboard!")
 
+def adjust_resolution(value):
+    """Adjusts the resolution of the text field based on the scale value."""
+    new_width = int(value)
+    text_field.config(width=new_width)
+    output_field.config(width=new_width)
+
+# Set DPI awareness and get scale factor
+ctypes.windll.shcore.SetProcessDpiAwareness(1)
+scaleFactor = ctypes.windll.shcore.GetScaleFactorForDevice(0) / 100
+
 root = tk.Tk()
 root.title("Quake Trigger Text Converter")
+root.geometry(f"{int(900 * scaleFactor)}x{int(500 * scaleFactor)}")
 
 newline_label = tk.Label(root, text="", font=custom_font)
 newline_label.grid(row=4, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
@@ -162,6 +173,8 @@ preview_label.grid(row=1, column=0, columnspan=2, padx=10, pady=10, sticky="nsew
 
 output_field = tk.Text(root, height=10, width=50, state=tk.DISABLED, font=custom_font)
 output_field.grid(row=3, column=0, columnspan=2, padx=10, pady=10, sticky="nsew")
+
+# Resolution scale feature was here initially.
 
 # Apply Sunvalley theme based on current system theme
 sv_ttk.set_theme(darkdetect.theme().lower())

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="GUI:&#10;- Added a message warning for the file saving function in case no text is written&#10;- Sunvalley with darkdetect implemented">
+    <list default="true" id="1c376c56-959b-4593-ab9e-ffb401ff4a02" name="Changes" comment="GUI:&#10;Added Segoe UI 10 as a font">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
@@ -143,7 +143,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738249598362</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="GUI:&#10;Added Segoe UI 11 as a font">
+      <option name="closed" value="true" />
+      <created>1738261809419</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738261809419</updated>
+    </task>
+    <task id="LOCAL-00012" summary="GUI:&#10;Added Segoe UI 10 as a font">
+      <option name="closed" value="true" />
+      <created>1738262025352</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738262025352</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -155,6 +171,8 @@
     <MESSAGE value="- Removed single quote function.&#10;- Added replace of single and double curly quotes with backticks" />
     <MESSAGE value="GUI:&#10;- Label print fixed in trigger_textstory fix&#10;- Trigger_textstory fix in TKInter (swapped from TK to TTK) hence fixing it visually.&#10;Minor:&#10;- Print command messages fixed (python internal command), some changed from '' to &quot;&quot;" />
     <MESSAGE value="GUI:&#10;- Added a message warning for the file saving function in case no text is written&#10;- Sunvalley with darkdetect implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI:&#10;- Added a message warning for the file saving function in case no text is written&#10;- Sunvalley with darkdetect implemented" />
+    <MESSAGE value="GUI:&#10;Added Segoe UI 11 as a font" />
+    <MESSAGE value="GUI:&#10;Added Segoe UI 10 as a font" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI:&#10;Added Segoe UI 10 as a font" />
   </component>
 </project>
